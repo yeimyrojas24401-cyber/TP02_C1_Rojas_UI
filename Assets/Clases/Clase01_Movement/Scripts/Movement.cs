@@ -18,11 +18,13 @@ public class Movement : MonoBehaviour
     [SerializeField] private KeyCode rotationLeft = KeyCode.Q; // The key to rotate the player left
     [SerializeField] private float rotationAngle = 10; // here we define a variable for the speed of the rotation of the player so that we can change it in the inspector of the unity editor
 
+    [Header("Color Settings")]
+    [SerializeField] private KeyCode colorChange = KeyCode.R; 
     private SpriteRenderer spriteRenderer; // Reference to the SpriteRenderer component
 
     private void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>(); //here we call the components of the sprite
     }
     
     private void Update()
@@ -54,10 +56,10 @@ public class Movement : MonoBehaviour
             // Rotate the player to the right
             transform.Rotate(Vector3.forward * -rotationAngle);
         }
-        if (Input.GetKeyUp(KeyCode.R))
+        if (Input.GetKeyUp(colorChange))
         {
-            // change the color of the sprite to a random color 
-
+            // change the color of the sprite to a random color (R,G,B for each channel i put a random value)
+            spriteRenderer.color = new Color(Random.value, Random.value, Random.value);
         }
     }
     
