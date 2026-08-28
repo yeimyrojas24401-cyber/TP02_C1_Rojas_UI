@@ -5,7 +5,11 @@ public class Movement : MonoBehaviour
 {
     private void Update()
     {
-
+        if (Input.GetKey(KeyCode.W))
+        {
+            // Move the player forward
+            transform.position = new Vector3(0, 1);
+        }
     }
     
 }
