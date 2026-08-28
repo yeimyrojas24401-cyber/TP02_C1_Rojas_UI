@@ -9,8 +9,8 @@ public class mainMenu : MonoBehaviour
     [SerializeField] private Button btnSettings;
     [SerializeField] private Button btnCredits;
     [SerializeField] private Button btnExit;
-    [SerializeField] private Button btnBack;
 
+    [Header("Panels")]
     [SerializeField] private GameObject mainMenuCanvas;
     [SerializeField] private GameObject settingsPanel;
     [SerializeField] private GameObject creditsPanel;
@@ -19,7 +19,6 @@ public class mainMenu : MonoBehaviour
     {
         btnPlay.onClick.AddListener(OnPlayClicked); // "When click in btnPlay ejecuta OnPlayClicked
         btnSettings.onClick.AddListener(OnSettingsClicked);
-        btnBack.onClick.AddListener(OnBackClicked);
         btnCredits.onClick.AddListener(OnCreditsClicked);
         settingsPanel.SetActive(false);
         creditsPanel.SetActive(false);
@@ -31,10 +30,9 @@ public class mainMenu : MonoBehaviour
     }
     private void OnDestroy()
     {
-        btnPlay.onClick.RemoveAllListeners();
-        btnSettings.onClick.RemoveAllListeners();
-        btnCredits.onClick.RemoveAllListeners();
-        btnBack.onClick.RemoveAllListeners();
+        btnPlay.onClick.RemoveListener(OnPlayClicked);
+        btnSettings.onClick.RemoveListener(OnSettingsClicked);
+        btnCredits.onClick.RemoveListener(OnCreditsClicked);
     }
     private void OnPlayClicked () // this is the function called OnPlayClicked which is going to run when the btnPlay click
     {
@@ -52,13 +50,6 @@ public class mainMenu : MonoBehaviour
         creditsPanel.SetActive(true);
         mainMenuCanvas.SetActive(false);
         settingsPanel.SetActive(false);
-    }
-    private void OnBackClicked()
-    {
-        mainMenuCanvas.SetActive(true);
-        settingsPanel.SetActive(false);
-        creditsPanel.SetActive(false);
-
     }
 
 }
