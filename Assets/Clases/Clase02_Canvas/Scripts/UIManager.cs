@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private TMP_Text profileName;
+    [Header("Buttons")]
     [SerializeField] private Button btnPlay;
     [SerializeField] private Button btnPause;
     [SerializeField] private Button btnSettings;
@@ -14,14 +14,17 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        btnPlay.onClick.AddListener();
+        btnPlay.onClick.AddListener(OnPlayClicked); // "When click in btnPlay ejecuta OnPlayClicked
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        profileName.text = "Player_01";
+        
     }
 
-    void OnPlayClicked(); // Create a function
+    private void OnPlayClicked () // this is the function called OnPlayClicked which is going to run when the btnPlay click
+    {
+        Debug.Log("play has been clicked");
+    }
 
 }
