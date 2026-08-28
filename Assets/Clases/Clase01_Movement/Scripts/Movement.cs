@@ -1,16 +1,11 @@
 using UnityEngine;
 
 public class Movement : MonoBehaviour
+// the purpose of this class is to handle the movement of the player character through the keyboard input
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Update()
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
+    
 }
