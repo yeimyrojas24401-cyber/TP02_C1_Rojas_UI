@@ -236,6 +236,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   profileName: {fileID: 692106396}
+  playBut: {fileID: 0}
+  pauseBut: {fileID: 0}
+  settingsBut: {fileID: 0}
+  creditsBut: {fileID: 0}
+  exitBut: {fileID: 0}
+  backBut: {fileID: 0}
 --- !u!1 &73998973
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,7 +754,7 @@ GameObject:
   - component: {fileID: 643506892}
   - component: {fileID: 643506891}
   m_Layer: 5
-  m_Name: playBut
+  m_Name: btnPlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -787,7 +793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1006,7 +1012,7 @@ GameObject:
   - component: {fileID: 713231895}
   - component: {fileID: 713231894}
   m_Layer: 5
-  m_Name: creditsBut
+  m_Name: btnCredits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1045,7 +1051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1158,7 +1164,7 @@ GameObject:
   - component: {fileID: 805019647}
   - component: {fileID: 805019646}
   m_Layer: 5
-  m_Name: exitBut
+  m_Name: btnExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1197,7 +1203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1807,7 +1813,7 @@ GameObject:
   - component: {fileID: 1593918080}
   - component: {fileID: 1593918079}
   m_Layer: 5
-  m_Name: settingsBut
+  m_Name: btnSettings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1846,7 +1852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
