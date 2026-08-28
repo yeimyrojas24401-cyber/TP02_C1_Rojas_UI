@@ -22,6 +22,7 @@ public class mainMenu : MonoBehaviour
         btnCredits.onClick.AddListener(OnCreditsClicked);
         settingsPanel.SetActive(false);
         creditsPanel.SetActive(false);
+        btnExit.onClick.AddListener(OnExitClicked);
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -51,5 +52,8 @@ public class mainMenu : MonoBehaviour
         mainMenuCanvas.SetActive(false);
         settingsPanel.SetActive(false);
     }
-
+    private void OnExitClicked ()
+    {
+        UnityEditor.EditorApplication.isPlaying = false;
+    }
 }
