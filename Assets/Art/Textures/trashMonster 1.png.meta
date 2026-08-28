@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c254225b0a283b94ca84fd8f560c9597
+guid: 1f691ac3e2ea500498d331bbeda2715e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2556760793263035008
-    second: seaLion_0
+      213: 2863163297996063904
+    second: trashMonster 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: seaLion_0
+      name: trashMonster 1_0
       rect:
         serializedVersion: 2
-        x: 19
+        x: 0
         y: 0
-        width: 1549
-        height: 1065
+        width: 288
+        height: 274
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 08d29e5da9f848cd0800000000000000
-      internalID: -2556760793263035008
+      spriteID: 0a4cdfe89dffbb720800000000000000
+      internalID: 2863163297996063904
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      seaLion_0: -2556760793263035008
+      trashMonster 1_0: 2863163297996063904
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
