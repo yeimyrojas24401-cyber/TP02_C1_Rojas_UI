@@ -1,5 +1,5 @@
 using TMPro;
-using Unity.VisualScripting;
+// si hay algo gris no lo necesito
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,8 +15,6 @@ public class mainMenu : MonoBehaviour
     [SerializeField] private GameObject mainMenuCanvas;
     [SerializeField] private GameObject settingsPanel;
     [SerializeField] private GameObject creditsPanel;
-
-    [SerializeField] private GameObject pausePanel;
 
     [Header("Slider")]
     [SerializeField] private Slider sliderPlayer1Speed;
@@ -45,8 +43,6 @@ public class mainMenu : MonoBehaviour
     {
         settingsPanel.SetActive(false);
         creditsPanel.SetActive(false);
-        pausePanel.SetActive(false);
-
     }
 
     private void OnDestroy() // for each add Listener we need to put one remove listener es como decir cuando este objeto vaya a destruirse, ya no ejecutes las cosas que estaban conectadas conmigo
@@ -67,10 +63,11 @@ public class mainMenu : MonoBehaviour
 
     private void OnSettingsClicked ()
     {
+        sliderPlayer1Speed.value = player1.moveSpeed;
+        sliderPlayer2Speed.value = player2.moveSpeed;
         mainMenuCanvas.SetActive(false);
         settingsPanel.SetActive(true);
         creditsPanel.SetActive(false);
-
     }
 
     private void OnCreditsClicked ()

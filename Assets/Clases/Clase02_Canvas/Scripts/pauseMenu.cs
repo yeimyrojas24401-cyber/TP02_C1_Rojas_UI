@@ -70,10 +70,10 @@ public class pauseMenu : MonoBehaviour
 
     private void OnSettingsClicked()
     {
+        sliderPlayer1Speed.value = player1.moveSpeed;
+        sliderPlayer2Speed.value = player2.moveSpeed;
         settingsPanel.SetActive(true);
     }
-
-
 
     private void OnCreditsClicked()
     {
@@ -82,17 +82,18 @@ public class pauseMenu : MonoBehaviour
 
     private void OnExitClicked()
     {
-        throw new NotImplementedException();
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 
-    private void OnPlayer2SpeedChanged(float arg0)
+    private void OnPlayer2SpeedChanged(float value)
     {
-        throw new NotImplementedException();
+        player2.moveSpeed = value;
+        textSpeedPlayer2.text = value.ToString("F1");
     }
 
-    private void OnPlayer1SpeedChanged(float arg0)
+    private void OnPlayer1SpeedChanged(float value)
     {
-        throw new NotImplementedException();
+        player1.moveSpeed = value;
+        textSpeedPlayer1.text = value.ToString("F1");
     }
-
 }
