@@ -27,6 +27,8 @@ public class pauseMenu : MonoBehaviour
     [SerializeField] private TMP_Text textSpeedPlayer1;
     [SerializeField] private TMP_Text textSpeedPlayer2;
 
+    private bool isPause = false;
+
     private void Awake() // solo para add listener y get components porque esta es la inicializacion (todas las referencias)
     {
         btnContinue.onClick.AddListener(OnContinueClicked); // "When click in btnPlay ejecuta OnContinueClicked
@@ -46,9 +48,9 @@ public class pauseMenu : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape)) 
         {
-            pausePanel.SetActive(true);
+            OnContinueClicked();
         }
     }
 
@@ -65,7 +67,16 @@ public class pauseMenu : MonoBehaviour
 
     private void OnContinueClicked()
     {
-        pausePanel.SetActive(false);
+        isPause = !isPause; //!igual a lo opuesto
+        pausePanel.SetActive(isPause);
+        if (isPause)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
     }
 
     private void OnSettingsClicked()
