@@ -322,8 +322,8 @@ MonoBehaviour:
   sliderPlayer2Speed: {fileID: 1347922509}
   player1: {fileID: 881196464}
   player2: {fileID: 1691841153}
-  textSpeedPlayer1: {fileID: 0}
-  textSpeedPlayer2: {fileID: 0}
+  textSpeedPlayer1: {fileID: 1491754924}
+  textSpeedPlayer2: {fileID: 1619794997}
 --- !u!1 &73998973
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,7 +707,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7334889541314990283, guid: 4c25ec44becbce045aa7a94395b4dbc9, type: 3}
+  m_Sprite: {fileID: 6114068605695227591, guid: 2ca4e88b21ea64b49af58611271902db, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -896,7 +896,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -366.25, y: -283.75}
+  m_AnchoredPosition: {x: -341, y: -283.75}
   m_SizeDelta: {x: 203.5, y: 64.5}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &550591909
@@ -919,7 +919,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PLAYERS SPEED
+  m_text: SPEED LEVEL
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9b07bdc642c083044beffb8c856c57c3, type: 2}
   m_sharedMaterial: {fileID: 3554604664583249039, guid: 9b07bdc642c083044beffb8c856c57c3, type: 2}
@@ -985,7 +985,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -71.99341, y: 0, z: -122.25452, w: 0}
+  m_margin: {x: -71.99341, y: 0, z: -38.426025, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1613,7 +1613,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -9089077684362620246, guid: 3f8a3d859a47e2a4fae668837afb32c5, type: 3}
+  m_Sprite: {fileID: 4931539908587857367, guid: 3c13a2190c233c748913b1218765424d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2349,7 +2349,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1%
+  m_text: 1.0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9b07bdc642c083044beffb8c856c57c3, type: 2}
   m_sharedMaterial: {fileID: 3554604664583249039, guid: 9b07bdc642c083044beffb8c856c57c3, type: 2}
@@ -2698,7 +2698,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1%
+  m_text: 1.0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9b07bdc642c083044beffb8c856c57c3, type: 2}
   m_sharedMaterial: {fileID: 3554604664583249039, guid: 9b07bdc642c083044beffb8c856c57c3, type: 2}
@@ -2764,7 +2764,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 130.38208, w: 0}
+  m_margin: {x: 0, y: 0, z: 91.470215, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3045,11 +3045,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4518514030267465434, guid: 1ec59a79228440b4b96f7a87446f81f9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 79
+      value: 1608
       objectReference: {fileID: 0}
     - target: {fileID: 4518514030267465434, guid: 1ec59a79228440b4b96f7a87446f81f9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -102
+      value: -75
       objectReference: {fileID: 0}
     - target: {fileID: 4518514030267465434, guid: 1ec59a79228440b4b96f7a87446f81f9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3345,7 +3345,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1938286188
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3386,7 +3386,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7488405778481248101, guid: 719bbac330e4eb143958b9db3a520a1c, type: 3}
+  m_Sprite: {fileID: 9119022346989890474, guid: 7ea4d5596cc86a84b8dededd7e83f36a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

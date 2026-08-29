@@ -36,7 +36,7 @@ public class mainMenu : MonoBehaviour
         settingsPanel.SetActive(false);
         creditsPanel.SetActive(false);
         btnExit.onClick.AddListener(OnExitClicked);
-        sliderPlayer1Speed.onValueChanged.AddListener(OnPlayer1SpeedChanged);
+        sliderPlayer1Speed.onValueChanged.AddListener(OnPlayer1SpeedChanged); //cuando el valor del slider cambie ejecuta OnPlayer1SpeedChanged
         sliderPlayer2Speed.onValueChanged.AddListener(OnPlayer2SpeedChanged);
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -75,11 +75,14 @@ public class mainMenu : MonoBehaviour
     private void OnPlayer1SpeedChanged (float value)
     {
         player1.moveSpeed = value;
+        // float percentage = value * 25f; //esto nos permite hacer una equivalencia para que la velocidad se ponga en %
+        textSpeedPlayer1.text = value.ToString("F1");
     }
 
     private void OnPlayer2SpeedChanged (float value)
     {
         player2.moveSpeed = value;
+        textSpeedPlayer2.text = value.ToString("F1");
     }
     private void OnExitClicked ()
     {
