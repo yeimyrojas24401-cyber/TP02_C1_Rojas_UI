@@ -507,7 +507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &411992897
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2118,6 +2118,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4542233679682510247, guid: 1ec59a79228440b4b96f7a87446f81f9, type: 3}
+      propertyPath: backPanel
+      value: 
+      objectReference: {fileID: 875598228}
+    - target: {fileID: 4542233679682510247, guid: 1ec59a79228440b4b96f7a87446f81f9, type: 3}
       propertyPath: currentPanel
       value: 
       objectReference: {fileID: 1938286187}
@@ -2359,7 +2363,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1938286188
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2510,6 +2514,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4542233679682510247, guid: 1ec59a79228440b4b96f7a87446f81f9, type: 3}
+      propertyPath: backPanel
+      value: 
+      objectReference: {fileID: 875598228}
     - target: {fileID: 4542233679682510247, guid: 1ec59a79228440b4b96f7a87446f81f9, type: 3}
       propertyPath: currentPanel
       value: 
