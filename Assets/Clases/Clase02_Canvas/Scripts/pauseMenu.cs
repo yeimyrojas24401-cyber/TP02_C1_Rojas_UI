@@ -20,9 +20,15 @@ public class pauseMenu : MonoBehaviour
     {
         settingsPanel.SetActive(false);
         creditsPanel.SetActive(false);
+        pausePanel.SetActive(false);
         btnContinue.onClick.AddListener(OnContinueClicked);
+
     }
 
+    void OnDestroy ()
+    {
+        btnContinue.onClick.RemoveListener(OnContinueClicked)
+    }
     void OnContinueClicked ()
     {
         pausePanel.SetActive(false);
