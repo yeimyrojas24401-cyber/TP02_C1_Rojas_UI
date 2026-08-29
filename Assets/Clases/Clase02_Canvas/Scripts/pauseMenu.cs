@@ -16,6 +16,8 @@ public class pauseMenu : MonoBehaviour
     [SerializeField] private GameObject creditsPanel;
     [SerializeField] private GameObject pausePanel;
 
+    [SerializeField] private GameObject canvasPauseMenu;
+
     private bool isPause = false;
 
     void Awake ()
@@ -23,6 +25,7 @@ public class pauseMenu : MonoBehaviour
         settingsPanel.SetActive(false);
         creditsPanel.SetActive(false);
         pausePanel.SetActive(false);
+        canvasPauseMenu.SetActive(false);
         btnContinue.onClick.AddListener(OnContinueClicked);
 
     }

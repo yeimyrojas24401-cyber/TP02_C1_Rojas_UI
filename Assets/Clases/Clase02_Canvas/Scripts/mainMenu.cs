@@ -15,6 +15,7 @@ public class mainMenu : MonoBehaviour
     [SerializeField] private GameObject mainMenuCanvas;
     [SerializeField] private GameObject settingsPanel;
     [SerializeField] private GameObject creditsPanel;
+    [SerializeField] private GameObject pausePanel;
 
     [Header("Slider")]
     [SerializeField] private Slider sliderPlayer1Speed;
@@ -35,6 +36,7 @@ public class mainMenu : MonoBehaviour
         btnCredits.onClick.AddListener(OnCreditsClicked);
         settingsPanel.SetActive(false);
         creditsPanel.SetActive(false);
+        pausePanel.SetActive(false);
         btnExit.onClick.AddListener(OnExitClicked);
         sliderPlayer1Speed.onValueChanged.AddListener(OnPlayer1SpeedChanged); //cuando el valor del slider cambie ejecuta OnPlayer1SpeedChanged
         sliderPlayer2Speed.onValueChanged.AddListener(OnPlayer2SpeedChanged);
@@ -44,7 +46,13 @@ public class mainMenu : MonoBehaviour
     {
         
     }
-
+    private void Update ()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pausePanel.SetActive(true);
+        }
+    }
     private void OnDestroy() // for each add Listener we need to put one remove listener es como decir cuando este objeto vaya a destruirse, ya no ejecutes las cosas que estaban conectadas conmigo
     {
         btnPlay.onClick.RemoveListener(OnPlayClicked);
