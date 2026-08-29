@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +16,18 @@ public class mainMenu : MonoBehaviour
     [SerializeField] private GameObject settingsPanel;
     [SerializeField] private GameObject creditsPanel;
 
+    [Header("Slider")]
+    [SerializeField] private Slider sliderPlayer1Speed;
+    [SerializeField] private Slider sliderPlayer2Speed;
+
+    [Header("Players")]
+    [SerializeField] private Movement player1;
+    [SerializeField] private Movement player2;
+
+    [Header("SpeedPlayersTMP")]
+    [SerializeField] private TMP_Text textSpeedPlayer1;
+    [SerializeField] private TMP_Text textSpeedPlayer2;
+
     private void Awake()
     {
         btnPlay.onClick.AddListener(OnPlayClicked); // "When click in btnPlay ejecuta OnPlayClicked
@@ -23,17 +36,23 @@ public class mainMenu : MonoBehaviour
         settingsPanel.SetActive(false);
         creditsPanel.SetActive(false);
         btnExit.onClick.AddListener(OnExitClicked);
+        sliderPlayer1Speed.onValueChanged.AddListener(OnPlayer1SpeedChanged);
+        sliderPlayer2Speed.onValueChanged.AddListener(OnPlayer2SpeedChanged);
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
     }
-    private void OnDestroy()
+    private void OnDestroy() // for each add Listener we need to put one remove listener es como decir cuando este objeto vaya a destruirse, ya no ejecutes las cosas que estaban conectadas conmigo
     {
         btnPlay.onClick.RemoveListener(OnPlayClicked);
         btnSettings.onClick.RemoveListener(OnSettingsClicked);
         btnCredits.onClick.RemoveListener(OnCreditsClicked);
+        btnExit.onClick.RemoveListener(OnExitClicked);
+
+        sliderPlayer1Speed.onValueChanged.RemoveListener(OnPlayer1SpeedChanged);
+        sliderPlayer2Speed.onValueChanged.RemoveListener(OnPlayer2SpeedChanged);
     }
     private void OnPlayClicked () // this is the function called OnPlayClicked which is going to run when the btnPlay click
     {
@@ -51,6 +70,16 @@ public class mainMenu : MonoBehaviour
         creditsPanel.SetActive(true);
         mainMenuCanvas.SetActive(false);
         settingsPanel.SetActive(false);
+    }
+
+    private void OnPlayer1SpeedChanged (float value)
+    {
+        player1.moveSpeed = value;
+    }
+
+    private void OnPlayer2SpeedChanged (float value)
+    {
+        player2.moveSpeed = value;
     }
     private void OnExitClicked ()
     {

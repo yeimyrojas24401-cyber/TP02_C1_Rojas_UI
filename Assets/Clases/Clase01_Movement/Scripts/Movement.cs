@@ -4,7 +4,7 @@ public class Movement : MonoBehaviour
 // the purpose of this class is to handle the movement of the player character through the keyboard input
 {
     [Header("Speed Settings")] // Here we use header to make a title in the editor
-    [SerializeField] private float moveSpeed = 1f; // The speed at which the player moves
+    public float moveSpeed = 1f; // The speed at which the player moves
 
     [Header("Movement Settings")]
     [SerializeField] private KeyCode moveUp = KeyCode.W; // The key to move the player up
