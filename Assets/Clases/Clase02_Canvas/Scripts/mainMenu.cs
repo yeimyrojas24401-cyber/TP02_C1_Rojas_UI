@@ -32,30 +32,23 @@ public class mainMenu : MonoBehaviour
 
     private void Awake()
     {
-        btnPlay.onClick.AddListener(OnPlayClicked); // "When click in btnPlay ejecuta OnPlayClicked
+        btnPlay.onClick.AddListener(OnPlayClicked); // "When click in btnPlay ejecuta OnContinueClicked
         btnSettings.onClick.AddListener(OnSettingsClicked);
         btnCredits.onClick.AddListener(OnCreditsClicked);
-        settingsPanel.SetActive(false);
-        creditsPanel.SetActive(false);
-        pausePanel.SetActive(false);
         btnExit.onClick.AddListener(OnExitClicked);
+
         sliderPlayer1Speed.onValueChanged.AddListener(OnPlayer1SpeedChanged); //cuando el valor del slider cambie ejecuta OnPlayer1SpeedChanged
         sliderPlayer2Speed.onValueChanged.AddListener(OnPlayer2SpeedChanged);
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
-    }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            pausePanel.SetActive(true);
-        }
+        settingsPanel.SetActive(false);
+        creditsPanel.SetActive(false);
+        pausePanel.SetActive(false);
 
-        
     }
+
     private void OnDestroy() // for each add Listener we need to put one remove listener es como decir cuando este objeto vaya a destruirse, ya no ejecutes las cosas que estaban conectadas conmigo
     {
         btnPlay.onClick.RemoveListener(OnPlayClicked);
@@ -66,10 +59,12 @@ public class mainMenu : MonoBehaviour
         sliderPlayer1Speed.onValueChanged.RemoveListener(OnPlayer1SpeedChanged);
         sliderPlayer2Speed.onValueChanged.RemoveListener(OnPlayer2SpeedChanged);
     }
-    private void OnPlayClicked () // this is the function called OnPlayClicked which is going to run when the btnPlay click
+
+    private void OnPlayClicked () // this is the function called OnContinueClicked which is going to run when the btnPlay click
     {
         mainMenuCanvas.SetActive(false); //  When Play is clicked, this GameObject becomes inactive.
     }
+
     private void OnSettingsClicked ()
     {
         mainMenuCanvas.SetActive(false);
@@ -77,6 +72,7 @@ public class mainMenu : MonoBehaviour
         creditsPanel.SetActive(false);
 
     }
+
     private void OnCreditsClicked ()
     {
         creditsPanel.SetActive(true);
