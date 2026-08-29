@@ -16,6 +16,8 @@ public class pauseMenu : MonoBehaviour
     [SerializeField] private GameObject creditsPanel;
     [SerializeField] private GameObject pausePanel;
 
+    private bool isPause = false;
+
     void Awake ()
     {
         settingsPanel.SetActive(false);
@@ -25,12 +27,42 @@ public class pauseMenu : MonoBehaviour
 
     }
 
-    void OnDestroy ()
+    private void Update()
     {
-        btnContinue.onClick.RemoveListener(OnContinueClicked)
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            TogglePause();
+        }
     }
-    void OnContinueClicked ()
+
+    private void OnDestroy()
     {
+        btnContinue.onClick.RemoveListener(OnContinueClicked);
+    }
+
+    private void TogglePause()
+    {
+        isPause = !isPause;
+
+        pausePanel.SetActive(isPause);
+
+        if (isPause)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
+    }
+
+    private void OnContinueClicked()
+    {
+        isPause = false;
+
         pausePanel.SetActive(false);
+
+        Time.timeScale = 1f;
     }
 }
+
